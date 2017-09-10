@@ -1,22 +1,22 @@
 const Compare = {
-    data: ["1","2"],
+    data: [],
     type: "list",
-    itemAlreadyAdded: function(id) {            
-      return ((this.data).filter(val => val === id )).length != 0 ? true : false;
+    itemAlreadyAdded: function(obj) {            
+      return ((this.data).filter(o => o.id === obj.id )).length != 0 ? true : false;
     },
-    addItem: function(id) {
+    addItem: function(obj) {
         if ((this.data).length >= 3) {
-          alert("The compare list is full.")
-        } else if (this.itemAlreadyAdded(id)) {
-          alert("Item already exists");
+          alert("The compare list is full.");     // ALERTS MOVED OUTSIDE
+        } else if (this.itemAlreadyAdded(obj)) {
+          alert("Item already exists");          
         } else {           
           const data = this.data;
-          this.data = [...data, id];                     
+          this.data = [...data, obj];        
         }              
     },
-    deleteItem: function(id) {     
+    deleteItem: function(obj) {     
       const data = this.data;
-      this.data = data.filter(val => val !== id); 
+      this.data = data.filter(o => o.id !== obj.id); 
     },
     renderCompareList: function(){
       const data = this.data;      

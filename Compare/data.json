@@ -1,0 +1,8 @@
+// Data of compare item to be pushed to data
+{
+  "id": "PROD1",
+  "name": "Item 1",
+  "code": "code 1",
+  "url": "/#1",
+  "img": "http://via.placeholder.com/300x300"
+}
