@@ -12,7 +12,13 @@ for (i=0; i < lengthAdd; i++) {
         }).catch((error) => { 
             alert(error.message);
             console.log(new Error(error.message))
-        });        
+        });  
+        
+        (Compare.renderCompareList())
+            .then((data) => {
+                console.log(data);
+                alert("Trigger: RENDER");
+            });
     });
     
 };
@@ -28,7 +34,10 @@ for (i=0; i < lengthRemove; i++) {
                 console.log(new Error(error))
             });        
         (Compare.renderCompareList())
-            .then((data) => {console.log(data)});
+            .then((data) => {
+                console.log(data);
+                alert("Trigger: RENDER");
+            });
     });
     
 };
