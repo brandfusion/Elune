@@ -8,22 +8,14 @@ for (i=0; i < lengthAdd; i++) {
         e.preventDefault();
         let id = e.target.attributes["data-id"].value;
       
-        (Compare.addItem(id)).then((output) => {          
-            alert(output.message);
+        (Compare.addItem(id)).then((data) => {          
+            alert(data.message);            
+            document.getElementById("output").innerHTML = data.payload;
         }).catch((error) => { 
             alert(error.message);
-            console.log(new Error(error.message))
-        });  
-        
-        (Compare.renderCompareList())
-            .then((data) => {
-                console.log(data);
-                // alert("Trigger: RENDER");
-                document.getElementById("output").innerHTML = data;
-            })
-            .catch((error)=>{
-                console.log(error);
-            });
+            // console.log(new Error(error.message))
+        }); 
+
     });
     
 };
@@ -33,20 +25,15 @@ for (i=0; i < lengthRemove; i++) {
         let id = e.target.attributes["data-id"].value;
       
         (Compare.removeItem(id))
-            .then((message) => { alert(message); })            
+            .then((data) => { 
+                alert(data.message); 
+                document.getElementById("output").innerHTML = data.payload;
+            })            
             .catch((error) => {
-                alert(error);
-                console.log(new Error(error))
+                alert(error.message);
+                // console.log(new Error(error))
             });        
-        (Compare.renderCompareList())
-            .then((data) => {
-                console.log(data);
-                // alert("Trigger: RENDER");
-                document.getElementById("output").innerHTML = data;
-            })
-            .catch((error)=>{
-                console.log(error);
-            });
+      
     });
     
 };
@@ -54,7 +41,7 @@ for (i=0; i < lengthRemove; i++) {
 
 //init
 (Compare.init()).then((data) => {
-    console.log(data);
+    // console.log(data);
     // alert("Trigger: RENDER");
     document.getElementById("output").innerHTML = data;
     })
