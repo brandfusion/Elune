@@ -1,7 +1,7 @@
 const Compare = {
     data: [],
     type: "list",
-    itemAlreadyAdded: function(id) {            
+    _itemAlreadyAdded: function(id) {            
       return ((this.data).filter(val => val === id )).length != 0 ? true : false;
     },
     addItem: function(id) {
@@ -10,12 +10,13 @@ const Compare = {
         if ((this.data).length >= 3) {
           output.type = "error";
           output.message = "ERROR: The compare list is full.";         
-        } else if (this.itemAlreadyAdded(id)) {          
+        } else if (this._itemAlreadyAdded(id)) {          
           output.type = "error";
           output.message = "ERROR: The is already in the compare list.";   
         } else {           
           let data = this.data;
-          this.data = [...data, id];   
+          this.data = [...data, id];             
+          sessionStorage.setItem("Compare", JSON.stringify(this.data));   //save to sessionStorage
           output.type= "success";
           output.message = "The product was added to compare list.";
         }  
@@ -28,25 +29,40 @@ const Compare = {
     },
     removeItem: function(id) {    
       return new Promise((resolve,reject) => {
-        let data = this.data;
-        this.data = data.filter(v => v !== id); 
+        let data = this.data;       
         if((this.data).filter(val => val === id).length > 0) {
+          this.data = data.filter(v => v !== id);         
           resolve("TRIGGER: Product was removed from compare list");
+          sessionStorage.setItem("Compare", JSON.stringify(this.data));   //save to sessionStorage
         } else {
           reject("ERROR: The selected product is not in the compare list");
         }
         
-      }); 
-     
+      });      
     },
     renderCompareList: function(){
-      return new Promise((resolve, reject) => {        
+      return new Promise((resolve, reject) => {               
         if((this.data).length === 0) {
           reject("ERROR: There are no items in the compare list.");
         } else {
           resolve(this.data);
+          console.log("RENDER:"+this.data); 
         }        
       });
         
+    },
+    _loadSessionStorageData: function() {  
+      var data = [];  
+      if (sessionStorage.getItem("Compare") !== null) {
+        this.data = data.concat(JSON.parse(sessionStorage.getItem("Compare")));
+      }      
+    },
+    init: function() {
+      // sessionStorage.clear();
+      return new Promise((resolve,reject) => {
+        this._loadSessionStorageData();
+        resolve(this.data);
+      });
+      
     }
 }

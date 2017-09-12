@@ -1,3 +1,4 @@
+//events
 const buttonsAdd = document.getElementsByClassName('add');
 const buttonsRemove = document.getElementsByClassName('remove');
 let lengthAdd = buttonsAdd.length;
@@ -17,7 +18,11 @@ for (i=0; i < lengthAdd; i++) {
         (Compare.renderCompareList())
             .then((data) => {
                 console.log(data);
-                alert("Trigger: RENDER");
+                // alert("Trigger: RENDER");
+                document.getElementById("output").innerHTML = data;
+            })
+            .catch((error)=>{
+                console.log(error);
             });
     });
     
@@ -36,8 +41,23 @@ for (i=0; i < lengthRemove; i++) {
         (Compare.renderCompareList())
             .then((data) => {
                 console.log(data);
-                alert("Trigger: RENDER");
+                // alert("Trigger: RENDER");
+                document.getElementById("output").innerHTML = data;
+            })
+            .catch((error)=>{
+                console.log(error);
             });
     });
     
 };
+
+
+//init
+(Compare.init()).then((data) => {
+    console.log(data);
+    // alert("Trigger: RENDER");
+    document.getElementById("output").innerHTML = data;
+    })
+    .catch((error)=>{
+        console.log(error);
+    });
