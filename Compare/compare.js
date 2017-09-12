@@ -1,21 +1,21 @@
 const Compare = {
     data: [],
     type: "list",
-    _itemAlreadyAdded: function(id) {            
-      return ((this.data).filter(val => val === id )).length != 0 ? true : false;
+    _itemAlreadyAdded: function(obj) {            
+      return ((this.data).filter(o => o.id === obj.id )).length != 0 ? true : false;
     },
-    addItem: function(id) {
+    addItem: function(obj) {
       return new Promise((resolve, reject) => {
         let output = {};
         if ((this.data).length >= 3) {
           output.type = "error";
           output.message = "ERROR: The compare list is full.";         
-        } else if (this._itemAlreadyAdded(id)) {          
+        } else if (this._itemAlreadyAdded(obj)) {          
           output.type = "error";
           output.message = "ERROR: The is already in the compare list.";   
         } else {           
           let data = this.data;
-          this.data = [...data, id];             
+          this.data = [...data, obj];             
           sessionStorage.setItem("Compare", JSON.stringify(this.data));   //save to sessionStorage
           output.type= "success";
           output.message = "The product was added to compare list.";
@@ -28,12 +28,12 @@ const Compare = {
         }
       });
     },
-    removeItem: function(id) {    
+    removeItem: function(obj) {    
       return new Promise((resolve,reject) => {
         let arr = this.data;  
         let output = {};    
-        if((this.data).filter(val => val === id).length > 0) {
-          this.data = arr.filter(v => v !== id);         
+        if((this.data).filter(o => o.id === obj.id).length > 0) {
+          this.data = arr.filter(o => o.id !== obj.id);         
           output.message = "TRIGGER: Product was removed from compare list";
           output.payload = this.data;
           resolve(output);

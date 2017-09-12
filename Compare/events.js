@@ -1,3 +1,12 @@
+function __crudeRender(arr){
+    let output = "";
+    arr.map(o => {
+        output += o.name + "/"
+    })
+    return output;
+}
+
+
 //events
 const buttonsAdd = document.getElementsByClassName('add');
 const buttonsRemove = document.getElementsByClassName('remove');
@@ -6,11 +15,16 @@ let lengthRemove = buttonsRemove.length;
 for (i=0; i < lengthAdd; i++) {
     buttonsAdd[i].addEventListener("click", function(e) {
         e.preventDefault();
-        let id = e.target.attributes["data-id"].value;
+        let obj = {};
+        obj.id = e.target.attributes["data-id"].value;
+        obj.name = e.target.attributes["data-name"].value;
+        obj.url = e.target.attributes["data-url"].value;
+        obj.code = e.target.attributes["data-code"].value;
+        obj.img = e.target.attributes["data-img"].value;
       
-        (Compare.addItem(id)).then((data) => {          
+        (Compare.addItem(obj)).then((data) => {          
             alert(data.message);            
-            document.getElementById("output").innerHTML = data.payload;
+            document.getElementById("output").innerHTML = __crudeRender(data.payload);
         }).catch((error) => { 
             alert(error.message);
             // console.log(new Error(error.message))
@@ -22,12 +36,17 @@ for (i=0; i < lengthAdd; i++) {
 for (i=0; i < lengthRemove; i++) {   
     buttonsRemove[i].addEventListener("click", function(e) {
         e.preventDefault();
-        let id = e.target.attributes["data-id"].value;
+        let obj = {}
+        obj.id = e.target.attributes["data-id"].value;
+        obj.name = e.target.attributes["data-name"].value;
+        obj.url = e.target.attributes["data-url"].value;
+        obj.code = e.target.attributes["data-code"].value;
+        obj.img = e.target.attributes["data-img"].value;
       
-        (Compare.removeItem(id))
+        (Compare.removeItem(obj))
             .then((data) => { 
                 alert(data.message); 
-                document.getElementById("output").innerHTML = data.payload;
+                document.getElementById("output").innerHTML = __crudeRender(data.payload);
             })            
             .catch((error) => {
                 alert(error.message);
@@ -40,10 +59,8 @@ for (i=0; i < lengthRemove; i++) {
 
 
 //init
-(Compare.init()).then((data) => {
-    // console.log(data);
-    // alert("Trigger: RENDER");
-    document.getElementById("output").innerHTML = data;
+(Compare.init()).then((data) => {   
+        document.getElementById("output").innerHTML =  __crudeRender(data);
     })
     .catch((error)=>{
         console.log(error);
