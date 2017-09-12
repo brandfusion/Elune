@@ -1,24 +1,52 @@
 const Compare = {
     data: [],
     type: "list",
-    itemAlreadyAdded: function(obj) {            
-      return ((this.data).filter(o => o.id === obj.id )).length != 0 ? true : false;
+    itemAlreadyAdded: function(id) {            
+      return ((this.data).filter(val => val === id )).length != 0 ? true : false;
     },
-    addItem: function(obj) {
+    addItem: function(id) {
+      return new Promise((resolve, reject) => {
+        let output = {};
         if ((this.data).length >= 3) {
-          alert("The compare list is full.");     // ALERTS MOVED OUTSIDE
-        } else if (this.itemAlreadyAdded(obj)) {
-          alert("Item already exists");          
+          output.type = "error";
+          output.message = "ERROR: The compare list is full.";         
+        } else if (this.itemAlreadyAdded(id)) {          
+          output.type = "error";
+          output.message = "ERROR: The is already in the compare list.";   
         } else {           
-          const data = this.data;
-          this.data = [...data, obj];        
-        }              
+          let data = this.data;
+          this.data = [...data, id];   
+          output.type= "success";
+          output.message = "The product was added to compare list.";
+        }  
+        if(output.type === "success") {
+          resolve(output);
+        } else {
+          reject(output);
+        }
+      });
     },
-    deleteItem: function(obj) {     
-      const data = this.data;
-      this.data = data.filter(o => o.id !== obj.id); 
+    removeItem: function(id) {    
+      return new Promise((resolve,reject) => {
+        let data = this.data;
+        this.data = data.filter(v => v !== id); 
+        if((this.data).filter(val => val === id).length > 0) {
+          resolve("TRIGGER: Product was removed from compare list");
+        } else {
+          reject("ERROR: The selected product is not in the compare list");
+        }
+        
+      }); 
+     
     },
     renderCompareList: function(){
-      const data = this.data;      
+      return new Promise((resolve, reject) => {        
+        if((this.data).length === 0) {
+          reject("ERROR: There are no items in the compare list.");
+        } else {
+          resolve(this.data);
+        }        
+      });
+        
     }
 }
