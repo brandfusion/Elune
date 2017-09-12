@@ -1,6 +1,5 @@
 const Compare = {
-    data: [],
-    type: "list",
+    data: [],    
     _itemAlreadyAdded: function(obj) {            
       return ((this.data).filter(o => o.id === obj.id )).length != 0 ? true : false;
     },
@@ -69,7 +68,25 @@ const Compare = {
         this._loadSessionStorageData();
         resolve(this.data);
         // console.log("RENDER:"+this.data);
-      });
-      
+      });      
+    },
+    initList: function() {
+      // sessionStorage.clear();
+      return new Promise((resolve,reject) => {
+        this._loadSessionStorageData();
+        resolve(this.data);
+        // console.log("RENDER:"+this.data);
+      });      
+    },
+    initWithProduct: function(obj) {
+      // sessionStorage.clear();
+      return new Promise((resolve,reject) => {
+        (this.addItem(obj)).then(data => {
+          this._loadSessionStorageData();
+          resolve(this.data);
+        });
+        
+        // console.log("RENDER:"+this.data);
+      });      
     }
 }
