@@ -21,6 +21,7 @@ const Compare = {
           output.message = "The product was added to compare list.";
         }  
         output.payload = this.data;
+        output.context = this.type;
         if(output.type === "success") {
           resolve(output);
         } else {
@@ -33,29 +34,30 @@ const Compare = {
         let arr = this.data;  
         let output = {};    
         if((this.data).filter(o => o.id === obj.id).length > 0) {
-          this.data = arr.filter(o => o.id !== obj.id);         
-          output.message = "TRIGGER: Product was removed from compare list";
-          output.payload = this.data;
-          resolve(output);
-          sessionStorage.setItem("Compare", JSON.stringify(this.data));   //save to sessionStorage
+          let itemToBeRemovedFromDataById = (this.data).filter(o => o.id === obj.id)[0];
+          if((this.data).indexOf(itemToBeRemovedFromDataById) === 0 && this.type === "product") { // if in product mode and its the first item in the array
+            // console.log(itemToBeRemoved);
+            output.message = "Error: Product can't be removed from list.";
+            output.payload = this.data;
+            output.context = this.type;
+            sessionStorage.setItem("Compare", JSON.stringify(this.data));   //save to sessionStorage  
+            reject(output);
+          } else {
+            this.data = arr.filter(o => o.id !== obj.id);         
+            output.message = "TRIGGER: Product was removed from compare list";
+            output.payload = this.data;
+            output.context = this.type;  
+            sessionStorage.setItem("Compare", JSON.stringify(this.data));   //save to sessionStorage
+            resolve(output);
+          }
         } else {
           output.message = "ERROR: The selected product is not in the compare list";
           output.payload = this.data;
+          output.context = this.type;
           reject(output);
         }
         
       });      
-    },
-    outputList: function(){
-      return new Promise((resolve, reject) => {               
-        if((this.data).length === 0) {
-          reject("ERROR: There are no items in the compare list.");
-        } else {
-          resolve(this.data);
-          // console.log("RENDER:"+this.data); 
-        }        
-      });
-        
     },
     _loadSessionStorageData: function() {  
       let data = [];  
@@ -67,16 +69,24 @@ const Compare = {
       // sessionStorage.clear();
       return new Promise((resolve,reject) => {
         this._loadSessionStorageData();
-        resolve(this.data);
+        let payload = this.data;
+        let context = this.type;
+        let output = {payload,context};
+        
+        resolve(output);
         // console.log("RENDER:"+this.data);
       });      
     },    
     initWithProduct: function(obj) {
       sessionStorage.clear();
+      this.type = "product";
       return new Promise((resolve,reject) => {
         (this.addItem(obj)).then(data => {
           this._loadSessionStorageData();
-          resolve(this.data);
+          let payload = this.data;
+          let context = this.type;
+          let output = {payload,context};
+          resolve(output);
         });
         
         // console.log("RENDER:"+this.data);
