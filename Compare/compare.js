@@ -1,5 +1,6 @@
 const Compare = {
-    data: [],    
+    data: [],  
+    type: "list",  
     _itemAlreadyAdded: function(obj) {            
       return ((this.data).filter(o => o.id === obj.id )).length != 0 ? true : false;
     },
@@ -45,7 +46,7 @@ const Compare = {
         
       });      
     },
-    renderCompareList: function(){
+    outputList: function(){
       return new Promise((resolve, reject) => {               
         if((this.data).length === 0) {
           reject("ERROR: There are no items in the compare list.");
@@ -69,17 +70,9 @@ const Compare = {
         resolve(this.data);
         // console.log("RENDER:"+this.data);
       });      
-    },
-    initList: function() {
-      // sessionStorage.clear();
-      return new Promise((resolve,reject) => {
-        this._loadSessionStorageData();
-        resolve(this.data);
-        // console.log("RENDER:"+this.data);
-      });      
-    },
+    },    
     initWithProduct: function(obj) {
-      // sessionStorage.clear();
+      sessionStorage.clear();
       return new Promise((resolve,reject) => {
         (this.addItem(obj)).then(data => {
           this._loadSessionStorageData();
