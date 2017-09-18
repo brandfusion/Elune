@@ -129,21 +129,3 @@ function removeFavoriteItem(e) {
   });  
 }
 
-// function addCompareItem(e) {
-//   e.preventDefault(); 
-//   id = e.target.attributes["data-id"].value;
-//   name = e.target.attributes["data-name"].value;
-//   url = e.target.attributes["data-url"].value;
-//   code = e.target.attributes["data-code"].value;
-//   img = e.target.attributes["data-img"].value;
-
-//   let obj = {name,id,code,img,url};        
-
-//   (Compare.addItem(obj)).then((data) => {          
-//       // alert(data.message);      
-//       __crudeRender(data);
-//   }).catch((error) => { 
-//       alert(error.message);
-//       // console.log(new Error(error.message))
-//   }); 
-// }
