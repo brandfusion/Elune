@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Favorite ES6 + Babel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+      #list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        border: 2px solid #000;
+        padding: 2rem;
+      }
+      #list .item {
+        width: 200px;
+      }
+    </style>
+</head>
+<body>
+    <div id="list">
+        <div class="item">
+          <button class="favorite-trigger active" data-url="/#1" data-id="id1" data-name="Item 1" data-img="http://placehold.it/50x50" data-price="100" data-code="code1" data-addfavorite="link" data-removefavorite="link" data-addtext="Item added to favorite list" data-removetext="Item removed from favorite list">Remove</button>
+          <h2>Item 1</h2>
+          <img src="http://placehold.it/50x50" alt="">
+          <p class="price">100</p>
+          <p class="code">code1</p>
+        </div>
+        <div class="item">
+          <button class="favorite-trigger" data-url="/#1" data-id="id2" data-name="Item 2" data-img="http://placehold.it/50x50" data-price="50" data-code="code2" data-addfavorite="link" data-removefavorite="link" data-addtext="Item added to favorite list" data-removetext="Item removed from favorite list">Add</button>
+          <h2>Item 2</h2>
+          <img src="http://placehold.it/50x50" alt="">
+          <p class="price">50</p>
+          <p class="code">code2</p>
+        </div>
+        <div class="item">
+          <button class="favorite-trigger" data-url="/#1" data-id="id3" data-name="Item 3" data-img="http://placehold.it/50x50" data-price="50" data-code="code3" data-addfavorite="link" data-removefavorite="link" data-addtext="Item added to favorite list" data-removetext="Item removed from favorite list">Add</button>
+          <h2>Item 3</h2>
+          <img src="http://placehold.it/50x50" alt="">
+          <p class="price">50</p>
+          <p class="code">code3</p>
+        </div>
+        <div class="item">
+          <button class="favorite-trigger" data-url="/#1" data-id="id4" data-name="Item 4" data-img="http://placehold.it/50x50" data-price="50" data-code="code4" data-addfavorite="link" data-removefavorite="link" data-addtext="Item added to favorite list" data-removetext="Item removed from favorite list">Add</button>
+          <h2>Item 4</h2>
+          <img src="http://placehold.it/50x50" alt="">
+          <p class="price">450</p>
+          <p class="code">code4</p>
+        </div>
+        <div class="item">
+          <button class="favorite-trigger" data-url="/#1" data-id="id5" data-name="Item 5" data-img="http://placehold.it/50x50" data-price="150" data-code="code5" data-addfavorite="link" data-removefavorite="link" data-addtext="Item added to favorite list" data-removetext="Item removed from favorite list">Add</button>
+          <h2>Item 5</h2>
+          <img src="http://placehold.it/50x50" alt="">
+          <p class="price">150</p>
+          <p class="code">code5</p>
+        </div>
+    </div>
+    <div id="count">Count: <span id="favorite-counter">0</span></div>
+    <div id="result"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+    <script src="favorite.js"></script>
+    <script src="favorite-events.js"></script>
+</body>
+</html>
