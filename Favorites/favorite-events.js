@@ -31,7 +31,7 @@ function triggerFavoriteAction(el) {
   let item = {id,name,url,code,img}
   obj = {action, message, type, item }
   
-  fakeAjaxCall(obj).then(function(data){
+  fakePostObject(obj).then(function(data){
     let message = data.message;  
 
     if(data.type === "add") {
@@ -61,7 +61,7 @@ function triggerFavoriteAction(el) {
   
 }
 
-function fakeAjaxCall(obj){  
+function fakePostObject(obj){  
   return new Promise(function(resolve){
       setTimeout(function(){
           resolve(obj);

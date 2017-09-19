@@ -1,0 +1,7 @@
+[
+  {"id":"id1","name": "Item 1", "code": "code1", "url": "/#2", "img": "http://placehold.it/50x50", "price": "100"},
+  {"id":"id2","name": "Item 2", "code": "code1", "url": "/#2", "img": "http://placehold.it/50x50", "price": "50"},
+  {"id":"id3","name": "Item 3", "code": "code1", "url": "/#2", "img": "http://placehold.it/50x50", "price": "150"},
+  {"id":"id4","name": "Item 4", "code": "code1", "url": "/#2", "img": "http://placehold.it/50x50", "price": "120"},
+  {"id":"id5","name": "Item 5", "code": "code1", "url": "/#2", "img": "http://placehold.it/50x50", "price": "50"},
+]
