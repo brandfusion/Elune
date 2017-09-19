@@ -1,5 +1,7 @@
 let buttonsFavorite = document.querySelectorAll('button.favorite-trigger');
 
+
+
 buttonsFavorite.forEach(el => {
   el.addEventListener("click", function(e) { 
     e.stopPropagation();          
@@ -129,3 +131,4 @@ function removeFavoriteItem(e) {
   });  
 }
 
+// random comment
