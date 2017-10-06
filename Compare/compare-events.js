@@ -22,7 +22,15 @@ function __crudeRender(data){
         });
       }
     }   
-        
+    let stringCompareIds = (data.payload).reduce((result, value, key)=>{
+      result = [...result, value.id];
+      return result;
+    },[]).join(",")
+   
+    if ((data.payload).length > 1) {
+      output += `<div class="compare-output-action"><a href="/Default.aspx?ID=77&compare=${stringCompareIds}"><i class="fa fa-exchange"></i> Compare</a></div>`;    
+    }
+    
     output += '</div>';
          
     document.getElementById("compare-output").innerHTML = output;
