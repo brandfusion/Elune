@@ -66,7 +66,7 @@ const Compare = {
       }      
     },
     init: function() {
-      // sessionStorage.clear();
+      sessionStorage.clear();
       return new Promise((resolve,reject) => {
         this._loadSessionStorageData();
         let payload = this.data;

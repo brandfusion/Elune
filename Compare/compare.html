@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Compare ES6 + Babel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="options">
@@ -13,21 +14,12 @@
     </div>
     <div id="wrapper" style="display: none;">
         <div id="add-wrapper">
-            <button class="add" type="button" data-url="/#1" data-id="PROD1" data-code="code 1" data-img="http://via.placeholder.com/300x300" data-name="Item 1">Add Item 1</button>
-            <button class="add" type="button" data-url="/#2" data-id="PROD2" data-code="code 2" data-img="http://via.placeholder.com/300x300" data-name="Item 2">Add Item 2</button>
-            <button class="add" type="button" data-url="/#3" data-id="PROD3" data-code="code 3" data-img="http://via.placeholder.com/300x300" data-name="Item 3">Add Item 3</button>
-            <button class="add" type="button" data-url="/#4" data-id="PROD4" data-code="code 4" data-img="http://via.placeholder.com/300x300" data-name="Item 4">Add Item 4</button>
-            <button class="add" type="button" data-url="/#5" data-id="PROD5" data-code="code 5" data-img="http://via.placeholder.com/300x300" data-name="Item 5">Add Item 5</button>
+            <button class="compare-trigger" type="button" data-url="/#1" data-id="PROD1" data-code="code 1" data-img="http://via.placeholder.com/300x300" data-name="Item 1">Item 1</button>
+            <button class="compare-trigger" type="button" data-url="/#2" data-id="PROD2" data-code="code 2" data-img="http://via.placeholder.com/300x300" data-name="Item 2"><i class="fa fa-square-o"></i> Item 2</button>
+            <button class="compare-trigger" type="button" data-url="/#3" data-id="PROD3" data-code="code 3" data-img="http://via.placeholder.com/300x300" data-name="Item 3"><i class="fa fa-square-o"></i> Item 3</button>
+            <button class="compare-trigger" type="button" data-url="/#4" data-id="PROD4" data-code="code 4" data-img="http://via.placeholder.com/300x300" data-name="Item 4"><i class="fa fa-square-o"></i> Item 4</button>
+            <button class="compare-trigger" type="button" data-url="/#5" data-id="PROD5" data-code="code 5" data-img="http://via.placeholder.com/300x300" data-name="Item 5"><i class="fa fa-square-o"></i> Item 5</button>
         </div>
-        <div id="remove-wrapper">
-            <button class="remove" type="button" data-url="/#1" data-id="PROD1" data-code="code 1" data-img="http://via.placeholder.com/300x300" data-name="Item 1">Remove Item 1</button>
-            <button class="remove" type="button" data-url="/#2" data-id="PROD2" data-code="code 2" data-img="http://via.placeholder.com/300x300" data-name="Item 2">Remove Item 2</button>
-            <button class="remove" type="button" data-url="/#3" data-id="PROD3" data-code="code 3" data-img="http://via.placeholder.com/300x300" data-name="Item 3">Remove Item 3</button>
-            <button class="remove" type="button" data-url="/#4" data-id="PROD4" data-code="code 4" data-img="http://via.placeholder.com/300x300" data-name="Item 4">Remove Item 4</button>
-            <button class="remove" type="button" data-url="/#5" data-id="PROD5" data-code="code 5" data-img="http://via.placeholder.com/300x300" data-name="Item 5">Remove Item 5</button>
-        </div>
-        <div id="output"></div>
-    
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
