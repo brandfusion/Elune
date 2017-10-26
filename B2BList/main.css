@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  flex-wrap: wrap;  
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.item .content {
+  padding: 0 2rem;
+}
+.item .order {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.item .quantity {
+  width: 5rem;
+  height: 2rem;
+}
+.item .price {
+  font-weight: 600;
+  padding: 0 2rem;
+}

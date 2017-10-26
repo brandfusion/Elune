@@ -1,0 +1,15 @@
+.variant-group-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.variant-group {
+  width: 10rem;
+  padding: 1rem;
+}
+button.active {
+  background-color: red;
+}
+/* #favorite {
+  display: none;
+} */
