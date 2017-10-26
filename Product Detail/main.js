@@ -154,6 +154,8 @@ variantButtons.forEach(el => {
     if (validateVariant()) {
       renderAddToFavorite(document.querySelector("#variantID").value); 
       registerEventsAfterFavoriteRender(); 
+    } else {
+      document.querySelector("#favorite").innerHTML = "";
     }
      
   });
