@@ -73,8 +73,7 @@ let variants = [
   }  
 ]
 
-function validateVariant(){
-  
+function validateVariant(){  
   let variantCount = variants.length > 0 ? ((variants[0].id).split(".")).length : 0;
   let variantInputLength = (document.querySelector("#variantID").value).split(".").length;
   let isValid = variantCount === variantInputLength ? true : false;  
@@ -105,6 +104,7 @@ function updateVariantOption(val){
     variantInput.value = variantValueArray.join(".");    
   }  
 }
+
 function registerEventsAfterFavoriteRender(){
   document.querySelector("#favorite a").addEventListener("click", e => {
     e.preventDefault();
@@ -123,11 +123,11 @@ function registerEventsAfterFavoriteRender(){
     },[]);
 
     renderAddToFavorite(variant);
-    registerEventsAfterFavoriteRender();
-    // console.log(variants);
+    registerEventsAfterFavoriteRender();  
     
   });
 }
+
 function renderAddToFavorite(variant){
   let variantObject = variants.filter(el => {return el.id == variant})[0];
   let isFavorite = variantObject.isFavorite;  
@@ -135,16 +135,26 @@ function renderAddToFavorite(variant){
   if(isFavorite === true) {    
     buttonProps = {"id": variantObject.id, "action":variantObject.linkRemoveFavorite,"value": isFavorite, "text":variantObject.linkRemoveFavoriteText}
   } else { 
-    buttonProps = {"id": variantObject.id, "action":variantObject.linkAddFavorite,"value": isFavorite, "text":variantObject.linkAddFavoriteText}
-    
+    buttonProps = {"id": variantObject.id, "action":variantObject.linkAddFavorite,"value": isFavorite, "text":variantObject.linkAddFavoriteText}    
   }
-  document.querySelector("#favorite").innerHTML = `<a href="${buttonProps.action}" id="${buttonProps.id}" data-favorite="${buttonProps.value}">${buttonProps.text}</button>`;
-  
+  document.querySelector("#favorite").innerHTML = `<a href="${buttonProps.action}" id="${buttonProps.id}" data-favorite="${buttonProps.value}">${buttonProps.text}</button>`;  
 }
 
+function autocompleteVariants(){
+  var variantCombinationArray  = (document.getElementById("variantID").value).split(".");
+  variantCombinationArray.map(val => {
+   document.getElementById(val).classList.add("active");
+  });
+}
+
+
+
 //init
+autocompleteVariants()
 
+//events
 
+//change variant option
 var variantButtons = document.querySelectorAll(".variant-group button");
 variantButtons.forEach(el => {
   el.addEventListener("click", e => {
