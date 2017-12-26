@@ -1,0 +1,36 @@
+#thumbnails-vertical--vertical {
+  overflow-y: auto;
+}
+
+#thumbnails-vertical--horizontal .flex-nowrap {
+  overflow-x: auto;
+}
+
+#thumbnails-horizontal--horizontal .flex-nowrap {
+  overflow-x: auto;
+}
+
+#thumbnails-horizontal--vertical .flex-nowrap {
+  overflow-x: auto;
+}
+#thumbnails-horizontal--vertical {
+  overflow-y: auto;
+}
+
+
+a {
+  color: #000;
+}
+.nav-link:after {
+  content : "/";
+  padding-left: 1rem;
+}
+.nav-link:last-child:after {
+  content: "";
+}
+.separator {
+  height: 1px;
+  background-color: gray;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
