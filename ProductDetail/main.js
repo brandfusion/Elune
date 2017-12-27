@@ -23,6 +23,16 @@ function verticalResponsiveThumbs() {
   } else {
     document.getElementById("thumbnails-vertical--vertical").style.height = "auto";
   }
+  document.querySelector("#product-image-vertical--vertical img").addEventListener("load", (e)=>{   
+    if (document.getElementById("thumbnails-vertical--vertical").style.height === "0px") {      
+      if (width < 992) {    
+        let productImageNodeHeight = productImageNode.height;
+        document.getElementById("thumbnails-vertical--vertical").style.height = productImageNodeHeight + "px";       
+      } else {
+        document.getElementById("thumbnails-vertical--vertical").style.height = "auto";       
+      }
+    }    
+  });
 
   window.addEventListener("resize", () => {
     console.log(productImageNode.height);
@@ -93,7 +103,20 @@ function verticalResponsiveThumbs__horizontal() {
     document.getElementById("thumbnails-horizontal--vertical").style.height = "auto";
     document.querySelector("#thumbnails-horizontal--vertical .row").classList.add("flex-nowrap");
   }
-
+ 
+  //if image was not loaded and height is 0px
+  document.querySelector("#product-image-horizontal--vertical img").addEventListener("load", (e)=>{   
+    if (document.getElementById("thumbnails-horizontal--vertical").style.height === "0px") {      
+      if (width < 992) {    
+        let productImageNodeHeight = productImageNode.height;
+        document.getElementById("thumbnails-horizontal--vertical").style.height = productImageNodeHeight + "px";
+        document.querySelector("#thumbnails-horizontal--vertical .row").classList.remove("flex-nowrap");
+      } else {
+        document.getElementById("thumbnails-horizontal--vertical").style.height = "auto";
+        document.querySelector("#thumbnails-horizontal--vertical .row").classList.add("flex-nowrap");
+      }
+    }    
+  });
   window.addEventListener("resize", () => {
     let width = window.innerWidth;  
     if (width < 992) {    
