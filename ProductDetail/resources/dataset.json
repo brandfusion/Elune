@@ -1,0 +1,302 @@
+[
+  {
+    "productId": "PRODTEST1",
+    "variants" : [
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B01",
+        "stock": 1,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST1&VariantID=A01.B01&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B02",
+        "stock": 0,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST1&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B03",
+        "stock": 1,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST1&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Red",
+        "id":"A02.B01",
+        "stock": 1,
+        "isFavorite": true,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST1&VariantID=A02.B01&Quantity=",
+        "images": ["images/PRODB.jpg", "images/PRODB_1.jpg", "images/PRODB_2.jpg", "images/PRODB_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Garnet",
+        "id":"A03.B02",
+        "stock": 1,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST1&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODC.jpg", "images/PRODC_1.jpg", "images/PRODC_2.jpg", "images/PRODC_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B01",
+        "stock": 1,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST1&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B02",
+        "stock": 1,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST1&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      }
+    ]
+  },
+  {
+    "productId": "PRODTEST2",
+    "variants" : [
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B01",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B01&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B03",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Red",
+        "id":"A02.B01",
+        "stock": 2,
+        "isFavorite": true,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A02.B01&Quantity=",
+        "images": ["images/PRODB.jpg", "images/PRODB_1.jpg", "images/PRODB_2.jpg", "images/PRODB_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Garnet",
+        "id":"A03.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODC.jpg", "images/PRODC_1.jpg", "images/PRODC_2.jpg", "images/PRODC_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B01",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      }
+    ]
+  },
+  {
+    "productId": "PRODTEST3",
+    "variants" : [
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B01",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B01&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B03",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Red",
+        "id":"A02.B01",
+        "stock": 2,
+        "isFavorite": true,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A02.B01&Quantity=",
+        "images": ["images/PRODB.jpg", "images/PRODB_1.jpg", "images/PRODB_2.jpg", "images/PRODB_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Garnet",
+        "id":"A03.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODC.jpg", "images/PRODC_1.jpg", "images/PRODC_2.jpg", "images/PRODC_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B01",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      }
+    ]
+  },
+  {
+    "productId": "PRODTEST4",
+    "variants" : [
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B01",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B01&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - White",
+        "id":"A01.B03",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A01.B02&Quantity=",
+        "images": ["images/PRODA.jpg", "images/PRODA_1.jpg", "images/PRODA_2.jpg", "images/PRODA_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Red",
+        "id":"A02.B01",
+        "stock": 2,
+        "isFavorite": true,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A02.B01&Quantity=",
+        "images": ["images/PRODB.jpg", "images/PRODB_1.jpg", "images/PRODB_2.jpg", "images/PRODB_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Garnet",
+        "id":"A03.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODC.jpg", "images/PRODC_1.jpg", "images/PRODC_2.jpg", "images/PRODC_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B01",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      },
+      {
+        "title": "Chantilly Lace Long Line Bralette - Black",
+        "id":"A04.B02",
+        "stock": 2,
+        "isFavorite": false,
+        "addToFavoritesLink": "/favorite-api&favorite=true",
+        "removeFromFavoritesLink": "/favorite-api&favorite=false",
+        "addToCartLink": "/cart?ProductID=PRODTEST2&VariantID=A03.B02&Quantity=",
+        "images": ["images/PRODD.jpg", "images/PRODD_1.jpg", "images/PRODD_2.jpg", "images/PRODD_3.jpg"]
+      }
+    ]
+  }
+]

@@ -12,7 +12,7 @@
 <body>
  <main class="container">
 
-  <article id="product-1" class="row">
+  <article id="product-1" class="row" data-scope-product-id="PRODTEST1">
     <nav class="nav breadcrumbs col-12">     
       <a href="" class="nav-link pr-0 d-flex align-items-center">Bras</a>
       <a href="" class="nav-link pr-0 d-flex align-items-center">Bralettes </a>
@@ -24,18 +24,18 @@
         <p class="number">A0001</p>
         <p class="price">123,03 RON</p>  
     </div>
-    <div class="image-wrapper col-lg-6">        
+    <div class="image-wrapper col-lg-6" data-scope="product-image-wrapper">        
       <div class="row">
         <div id="thumbnails-vertical--vertical" class="col-3 order-2 order-lg-1">
-          <div class="row no-gutters">
-            <div class="item col-12 mb-3 "><img src="images/PRODA.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
-            <div class="item col-12 mb-3"><img src="images/PRODA_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-            <div class="item col-12 mb-3"><img src="images/PRODA_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-            <div class="item col-12"><img src="images/PRODA_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
+          <div class="row no-gutters" data-scope="thumbnail-container">
+            <div class="item col-12 mb-3 " data-scope="thumbnail-image"><img src="images/PRODA.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
+            <div class="item col-12 mb-3" data-scope="thumbnail-image"><img src="images/PRODA_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+            <div class="item col-12 mb-3" data-scope="thumbnail-image"><img src="images/PRODA_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+            <div class="item col-12 mb-3" data-scope="thumbnail-image"><img src="images/PRODA_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
           </div>            
         </div>
         <div id="product-image-vertical--vertical" class="col-9 order-1 order-lg-2 pr-0 px-lg-0 mb-3">
-          <img src="images/PRODA.jpg" class="img-fluid w-100" alt="" data-action="zoom" />
+          <img src="images/PRODA.jpg" class="img-fluid w-100" alt="" data-action="zoom" data-scope="product-image"/>
         </div>
       </div> 
     </div>
@@ -49,17 +49,42 @@
         <div class="description d-lg-block">
           <h3 class="h3">Description</h3>
           <p>Too pretty to hide, with delicate Chantilly lace in the long line shape you love.</p>
-        </div>     
+        </div>    
+        <div class="product-order">
+          <input type="hidden" class="VariantID" disabled value="" data-scope="VariantID"/>  
+          <input type="hidden" class="ProductID" value="PRODTEST1"  /> 
+            <div class="color">
+              <button type="button" data-id="A01" value="A01" data-scope="variant">White</button>
+              <button type="button" data-id="A02" value="A02" data-scope="variant">Red</button>
+              <button type="button" data-id="A03" value="A03" data-scope="variant">Garnet</button>
+              <button type="button" data-id="A04" value="A04" data-scope="variant">Black</button>
+            </div>
+            <div class="size">
+              <button type="button" data-id="B01" value="B01" data-scope="variant">S</button>
+              <button type="button" data-id="B02" value="B02" data-scope="variant">M</button>
+              <button type="button" data-id="B03" value="B03" data-scope="variant">L</button>
+            </div>   
+            
+            <div class="quantity-container" style="margin-top:2rem;">
+              Quantity: <input type="number" value="1" min="1" max="9999" step="1" class="quantity" data-scope="quantity" />
+            </div>
+            <div class="add-to-cart-container">
+              <button type="button" class="addToCart" data-scope="addToCart">Purchase</button>    
+            </div>
+            <div class="favorite-container" class="hidden" style="margin-top:2rem;">
+              <span>Favorite list variants</span>
+              <button type="button" class="addToFavorites hidden">Add to favorite</button>
+              <button type="button" class="removeFromFavorites hidden">Remove from favorites</button>
+            </div>
+        </div> 
     </div> 
     
-    <div class="product-order">
-      
-    </div>
+    
   </article>
 
   <div class="separator"></div>
 
-  <article id="product-2" class="row">
+  <article id="product-2" class="row" data-scope-product-id="PRODTEST2" >
       <nav class="nav breadcrumbs col-12">     
         <a href="" class="nav-link pr-0 d-flex align-items-center">Bras</a>
         <a href="" class="nav-link pr-0 d-flex align-items-center">Bralettes </a>
@@ -71,18 +96,18 @@
           <p class="number">A0001</p>
           <p class="price">123,03 RON</p>  
       </div>
-      <div class="image-wrapper col-lg-6">        
+      <div class="image-wrapper col-lg-6" data-scope="product-image-wrapper">        
         <div class="row">
           <div id="thumbnails-vertical--horizontal" class="col-12 col-lg-3 order-1 order-lg-1 ">
-            <div class="row no-gutters flex-nowrap flex-lg-wrap">
-              <div class="item col-4 col-lg-12 mb-3 mr-3 mr-lg-0"><img src="images/PRODB.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
-              <div class="item col-4 col-lg-12 mb-3 mr-3 mr-lg-0"><img src="images/PRODB_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-              <div class="item col-4 col-lg-12 mb-3 mr-3 mr-lg-0"><img src="images/PRODB_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-              <div class="item col-4 col-lg-12 "><img src="images/PRODB_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
+            <div class="row no-gutters flex-nowrap flex-lg-wrap" data-scope="thumbnail-container">
+              <div data-scope="thumbnail-image" class="item col-4 col-lg-12 mb-3 mr-3 mr-lg-0"><img src="images/PRODB.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-4 col-lg-12 mb-3 mr-3 mr-lg-0"><img src="images/PRODB_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-4 col-lg-12 mb-3 mr-3 mr-lg-0"><img src="images/PRODB_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-4 col-lg-12 mb-3 mr-3 mr-lg-0"><img src="images/PRODB_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
             </div>            
           </div>
           <div id="product-image-vertical--horizontal" class="col-12 col-lg-9 order-2 order-lg-2 pr-lg-0 px-lg-0 mb-3">
-            <img src="images/PRODB.jpg" class="img-fluid w-100" alt="" data-action="zoom" />
+            <img src="images/PRODB.jpg" class="img-fluid w-100" alt="" data-action="zoom" data-scope="product-image" />
           </div>
         </div> 
       </div>
@@ -96,17 +121,42 @@
           <div class="description d-lg-block">
             <h3 class="h3">Description</h3>
             <p>Too pretty to hide, with delicate Chantilly lace in the long line shape you love.</p>
-          </div>     
+          </div> 
+          <div class="product-order" >
+            <input type="hidden" class="VariantID" disabled value="" data-scope="VariantID"/>  
+            <input type="hidden" class="ProductID" value="PRODTEST2" data-scope="ProductID" /> 
+              <div class="color">
+                <button type="button" data-id="A01" value="A01" data-scope="variant">White</button>
+                <button type="button" data-id="A02" value="A02" data-scope="variant">Red</button>
+                <button type="button" data-id="A03" value="A03" data-scope="variant">Garnet</button>
+                <button type="button" data-id="A04" value="A04" data-scope="variant">Black</button>
+              </div>
+              <div class="size">
+                <button type="button" data-id="B01" value="B01" data-scope="variant">S</button>
+                <button type="button" data-id="B02" value="B02" data-scope="variant">M</button>
+                <button type="button" data-id="B03" value="B03" data-scope="variant">L</button>
+              </div>   
+              
+              <div class="quantity-container" style="margin-top:2rem;">
+                Quantity: <input type="number" value="1" min="1" max="9999" step="1" class="quantity" data-scope="quantity" />
+              </div>
+              <div class="add-to-cart-container">
+                <button type="button" class="addToCart" data-scope="addToCart">Purchase</button>    
+              </div>
+              <div class="favorite-container" class="hidden" style="margin-top:2rem;">
+                <span>Favorite list variants</span>
+                <button type="button" class="addToFavorites hidden">Add to favorite</button>
+                <button type="button" class="removeFromFavorites hidden">Remove from favorites</button>
+              </div>
+          </div>    
       </div> 
       
-      <div class="product-order">
-        
-      </div>
+       
   </article>
 
   <div class="separator"></div>
 
-  <article id="product-3" class="row">
+  <article id="product-3" class="row" data-scope-product-id="PRODTEST3">
       <nav class="nav breadcrumbs col-12">     
         <a href="" class="nav-link pr-0 d-flex align-items-center">Bras</a>
         <a href="" class="nav-link pr-0 d-flex align-items-center">Bralettes </a>
@@ -118,18 +168,18 @@
           <p class="number">A0001</p>
           <p class="price">123,03 RON</p>  
       </div>
-      <div class="image-wrapper col-lg-6">        
+      <div class="image-wrapper col-lg-6" data-scope="product-image-wrapper">        
         <div class="row">
           <div id="thumbnails-horizontal--horizontal" class="col-12 order-2 order-lg-2 pr-lg-0">
-            <div class="row no-gutters flex-nowrap">
-              <div class="item col-4 mb-3 mr-3"><img src="images/PRODC.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
-              <div class="item col-4 mb-3 mr-3"><img src="images/PRODC_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-              <div class="item col-4 mb-3 mr-3"><img src="images/PRODC_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-              <div class="item col-4 "><img src="images/PRODC_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
+            <div class="row no-gutters flex-nowrap" data-scope="thumbnail-container">
+              <div data-scope="thumbnail-image" class="item col-4 mb-3 mr-3"><img src="images/PRODC.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-4 mb-3 mr-3"><img src="images/PRODC_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-4 mb-3 mr-3"><img src="images/PRODC_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-4 mb-3 mr-3"><img src="images/PRODC_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
             </div>            
           </div>
           <div id="product-image-horizontal--horizontal" class="col-12 order-1 order-lg-1 pr-lg-0 mb-3">
-            <img src="images/PRODC.jpg" class="img-fluid w-100" alt="" data-action="zoom" />
+            <img src="images/PRODC.jpg" class="img-fluid w-100" alt="" data-action="zoom" data-scope="product-image" />
           </div>
         </div> 
       </div>
@@ -143,18 +193,42 @@
           <div class="description d-lg-block">
             <h3 class="h3">Description</h3>
             <p>Too pretty to hide, with delicate Chantilly lace in the long line shape you love.</p>
-          </div>     
+          </div>  
+          <div class="product-order">
+            <input type="hidden" class="VariantID" disabled value="" data-scope="VariantID"/>  
+            <input type="hidden" class="ProductID" value="PRODTEST3" data-scope="ProductID" /> 
+              <div class="color">
+                <button type="button" data-id="A01" value="A01" data-scope="variant">White</button>
+                <button type="button" data-id="A02" value="A02" data-scope="variant">Red</button>
+                <button type="button" data-id="A03" value="A03" data-scope="variant">Garnet</button>
+                <button type="button" data-id="A04" value="A04" data-scope="variant">Black</button>
+              </div>
+              <div class="size">
+                <button type="button" data-id="B01" value="B01" data-scope="variant">S</button>
+                <button type="button" data-id="B02" value="B02" data-scope="variant">M</button>
+                <button type="button" data-id="B03" value="B03" data-scope="variant">L</button>
+              </div>   
+              
+              <div class="quantity-container" style="margin-top:2rem;">
+                Quantity: <input type="number" value="1" min="1" max="9999" step="1" class="quantity" data-scope="quantity" />
+              </div>
+              <div class="add-to-cart-container">
+                <button type="button" class="addToCart" data-scope="addToCart">Purchase</button>    
+              </div>
+              <div class="favorite-container" class="hidden" style="margin-top:2rem;">
+                <span>Favorite list variants</span>
+                <button type="button" class="addToFavorites hidden">Add to favorite</button>
+                <button type="button" class="removeFromFavorites hidden">Remove from favorites</button>
+              </div>
+          </div>   
       </div> 
       
-      <div class="product-order">
-        
-      </div>
   </article>
 
   <div class="separator"></div>
 
 
-  <article id="product-4" class="row">
+  <article id="product-4" class="row" data-scope-product-id="PRODTEST4">
       <nav class="nav breadcrumbs col-12">     
         <a href="" class="nav-link pr-0 d-flex align-items-center">Bras</a>
         <a href="" class="nav-link pr-0 d-flex align-items-center">Bralettes </a>
@@ -166,18 +240,18 @@
           <p class="number">A0001</p>
           <p class="price">123,03 RON</p>  
       </div>
-      <div class="image-wrapper col-lg-6">        
+      <div class="image-wrapper col-lg-6" data-scope="product-image-wrapper">        
         <div class="row">
           <div id="thumbnails-horizontal--vertical" class="col-3 col-lg-12 order-1 order-lg-2 pr-lg-0">
-            <div class="row no-gutters flex-nowrap">
-              <div class="item col-12 col-lg-4 mb-3 mr-lg-3"><img src="images/PRODD.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
-              <div class="item col-12 col-lg-4 mb-3 mr-lg-3"><img src="images/PRODD_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-              <div class="item col-12 col-lg-4 mb-3 mr-lg-3"><img src="images/PRODD_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
-              <div class="item col-12 col-lg-4 "><img src="images/PRODD_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
+            <div class="row no-gutters flex-nowrap" data-scope="thumbnail-container">
+              <div data-scope="thumbnail-image" class="item col-12 col-lg-4 mb-3 mr-lg-3"><img src="images/PRODD.jpg" class="img-fluid img-thumbnail rounded-0 border-dark" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-12 col-lg-4 mb-3 mr-lg-3"><img src="images/PRODD_1.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-12 col-lg-4 mb-3 mr-lg-3"><img src="images/PRODD_2.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>
+              <div data-scope="thumbnail-image" class="item col-12 col-lg-4 mb-3 mr-lg-3"><img src="images/PRODD_3.jpg" class="img-fluid img-thumbnail rounded-0" alt="" /></div>  
             </div>            
           </div>
           <div id="product-image-horizontal--vertical" class="col-9 col-lg-12 order-2 order-lg-1 pl-0 pl-lg-3 pr-lg-0 mb-3">
-            <img src="images/PRODD.jpg" class="img-fluid w-100" alt="" data-action="zoom" />
+            <img src="images/PRODD.jpg" class="img-fluid w-100" alt="" data-action="zoom" data-scope="product-image" />
           </div>
         </div> 
       </div>
@@ -191,12 +265,36 @@
           <div class="description d-lg-block">
             <h3 class="h3">Description</h3>
             <p>Too pretty to hide, with delicate Chantilly lace in the long line shape you love.</p>
-          </div>     
+          </div>   
+          <div class="product-order">
+            <input type="hidden" class="VariantID" disabled value="" data-scope="VariantID"/>  
+            <input type="hidden" class="ProductID" value="PRODTEST4" data-scope="ProductID"/> 
+              <div class="color">
+                <button type="button" data-id="A01" value="A01" data-scope="variant">White</button>
+                <button type="button" data-id="A02" value="A02" data-scope="variant">Red</button>
+                <button type="button" data-id="A03" value="A03" data-scope="variant">Garnet</button>
+                <button type="button" data-id="A04" value="A04" data-scope="variant">Black</button>
+              </div>
+              <div class="size">
+                <button type="button" data-id="B01" value="B01" data-scope="variant">S</button>
+                <button type="button" data-id="B02" value="B02" data-scope="variant">M</button>
+                <button type="button" data-id="B03" value="B03" data-scope="variant">L</button>
+              </div>   
+              
+              <div class="quantity-container" style="margin-top:2rem;">
+                Quantity: <input type="number" value="1" min="1" max="9999" step="1" class="quantity" data-scope="quantity" />
+              </div>
+              <div class="add-to-cart-container">
+                <button type="button" class="addToCart" data-scope="addToCart">Purchase</button>    
+              </div>
+              <div class="favorite-container" class="hidden" style="margin-top:2rem;">
+                <span>Favorite list variants</span>
+                <button type="button" class="addToFavorites hidden">Add to favorite</button>
+                <button type="button" class="removeFromFavorites hidden">Remove from favorites</button>
+              </div>
+          </div>  
       </div> 
-      
-      <div class="product-order">
-        
-      </div>
+     
   </article>
       
        
@@ -208,5 +306,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/1.2.6/zooming.min.js"></script>
 
   <script src="main.js"></script>
+  <script src="variants.js"></script>
 </body>
 </html>
