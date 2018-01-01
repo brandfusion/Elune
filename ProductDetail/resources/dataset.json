@@ -155,7 +155,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - White",
         "id":"A01.B01",
-        "stock": 2,
+        "stock": 3,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -165,7 +165,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - White",
         "id":"A01.B02",
-        "stock": 2,
+        "stock": 3,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -175,7 +175,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - White",
         "id":"A01.B03",
-        "stock": 2,
+        "stock": 3,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -185,7 +185,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Red",
         "id":"A02.B01",
-        "stock": 2,
+        "stock": 3,
         "isFavorite": true,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -195,7 +195,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Garnet",
         "id":"A03.B02",
-        "stock": 2,
+        "stock": 3,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -205,7 +205,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Black",
         "id":"A04.B01",
-        "stock": 2,
+        "stock": 3,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -215,7 +215,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Black",
         "id":"A04.B02",
-        "stock": 2,
+        "stock": 3,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -230,7 +230,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - White",
         "id":"A01.B01",
-        "stock": 2,
+        "stock": 4,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -240,7 +240,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - White",
         "id":"A01.B02",
-        "stock": 2,
+        "stock": 4,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -250,7 +250,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - White",
         "id":"A01.B03",
-        "stock": 2,
+        "stock": 4,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -260,7 +260,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Red",
         "id":"A02.B01",
-        "stock": 2,
+        "stock": 4,
         "isFavorite": true,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -270,7 +270,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Garnet",
         "id":"A03.B02",
-        "stock": 2,
+        "stock": 4,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -280,7 +280,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Black",
         "id":"A04.B01",
-        "stock": 2,
+        "stock": 4,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",
@@ -290,7 +290,7 @@
       {
         "title": "Chantilly Lace Long Line Bralette - Black",
         "id":"A04.B02",
-        "stock": 2,
+        "stock": 4,
         "isFavorite": false,
         "addToFavoritesLink": "/favorite-api&favorite=true",
         "removeFromFavoritesLink": "/favorite-api&favorite=false",

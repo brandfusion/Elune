@@ -1,0 +1,86 @@
+{
+  "Summary" : { 
+  "Quantity": "10",   
+  "Price": "412,57",
+  "Currency": "LEI",
+  "CartIsEmpty": "False",
+  "CartIsEmptyMessage" : "Cosul este gol"
+  },
+  "List": [
+       
+        { "OrderlineId": "OL301912",
+          "ProductName": "Chantilly Lace Long Line Bralette",
+          "ProductLink": "/Default.aspx?Id=48&ProductID=PRODA",
+          "ProductId": "PRODA",
+          "Image": "images/PRODA.jpg",
+          "VariantId": "BLACK.CIORAPI3",
+          "VariantText": "Black - 3",
+          "UnitPrice": "34,67 lei",
+          "TotalPriceWithDiscounts": "41,26 lei",
+          "UpdateQuantityLink": "/Default.aspx?CartCmd=updateorderlines&QuantityOrderLineOL301912=",
+          "RemoveFromCart": "/Default.aspx?ID=787&amp;OrderContext=ORDERCONTEXT1&amp;CartCmd=DelOrderLine&amp;key=OL301912",
+          "Quantity": "1"
+        },
+      
+       
+        { "OrderlineId": "OL301916",
+          "ProductName": "Chantilly Lace Long Line Bralette",
+          "ProductLink": "/Default.aspx?Id=48&ProductID=PRODB",
+          "ProductId": "PRODB",
+          "Image": "images/PRODB.jpg",
+          "VariantId": "RED.CIORAPI2",
+          "VariantText": "Red - 2",
+          "UnitPrice": "34,67 lei",
+          "TotalPriceWithDiscounts": "123,77 lei",
+          "UpdateQuantityLink": "/Default.aspx?CartCmd=updateorderlines&QuantityOrderLineOL301916=",
+          "RemoveFromCart": "/Default.aspx?ID=787&amp;OrderContext=ORDERCONTEXT1&amp;CartCmd=DelOrderLine&amp;key=OL301916",
+          "Quantity": "3"
+        },
+      
+       
+        { "OrderlineId": "OL301917",
+          "ProductName": "Chantilly Lace Long Line Bralette",
+          "ProductLink": "/Default.aspx?Id=48&ProductID=PRODC",
+          "ProductId": "PRODC",
+          "Image": "images/PRODC.jpg",
+          "VariantId": "RED.CIORAPI3",
+          "VariantText": "Red - 3",
+          "UnitPrice": "34,67 lei",
+          "TotalPriceWithDiscounts": "123,77 lei",
+          "UpdateQuantityLink": "/Default.aspx?CartCmd=updateorderlines&QuantityOrderLineOL301917=",
+          "RemoveFromCart": "/Default.aspx?ID=787&amp;OrderContext=ORDERCONTEXT1&amp;CartCmd=DelOrderLine&amp;key=OL301917",
+          "Quantity": "3"
+        },
+      
+      
+        { "OrderlineId": "OL301918",
+          "ProductName": "Chantilly Lace Long Line Bralette",
+          "ProductLink": "/Default.aspx?Id=48&ProductID=PRODD",
+          "ProductId": "PRODD",
+          "Image": "images/PRODD.jpg",
+          "VariantId": "RED.CIORAPI4",
+          "VariantText": "Red - 4",
+          "UnitPrice": "34,67 lei",
+          "TotalPriceWithDiscounts": "123,77 lei",
+          "UpdateQuantityLink": "/Default.aspx?CartCmd=updateorderlines&QuantityOrderLineOL301918=",
+          "RemoveFromCart": "/Default.aspx?ID=787&amp;OrderContext=ORDERCONTEXT1&amp;CartCmd=DelOrderLine&amp;key=OL301918",
+          "Quantity": "3"
+        }
+      
+  ],
+  "Shipping": "",
+  "Payment" : "",
+  "Vouchers": [
+    {
+      "Type": "Voucher",
+      "ErrorMessage": "",
+      "Code": ""      
+    },{
+      "Type": "Gift Card",
+      "Code": "",
+      "ErrorMessage": ""  
+    }
+  ]
+
+      
+  }

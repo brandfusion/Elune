@@ -1,5 +1,5 @@
 // Message for unavailable message
-let errorCombinationNotAvailable = "This option is not available for the current combination";
+const errorCombinationNotAvailable = "This option is not available for the current combination";
 
 // Function for registering thumbnail events (in case it isn`t loaded already)
 // function RegisterThumbnailEvents(scope) {

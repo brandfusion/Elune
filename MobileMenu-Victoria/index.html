@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div id="header" class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end py-3">
+          <button type="button" class="mobile-menu-trigger btn-dark">
+            <i class="fa fa-shopping-bag"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="minicart-header" class="bg-dark w-100">
+    <div class="p-3 d-flex justify-content-between align-items-center text-white">
+        <i class="fa fa-shopping-bag text-white"></i>
+        <span>Your Cart</span>
+        <button type="button" class="close-minicart btn btn-dark rounded-0 py-0">
+          <i class="fa fa-close"></i>
+        </button>
+    </div>
+  </div>
+  <div id="minicart-detail" class="bg-white w-100 position-fixed border-dark">   
+    <div class="hasItems d-none">
+        <div class="px-3 pt-3">
+            <a href="#nextStep" title="" class="btn btn-dark border-0 rounded-0 w-100">Checkout
+              <i class="fa fa-long-arrow-right ml-3"></i>
+            </a>
+          </div>
+          <div class="summary p-3">
+            <p class="h4 mb-0 border border-top-0 border-left-0 border-right-0 pb-3">Subtotal:
+              <span>412,57 LEI</span>
+            </p>
+          </div>
+          <div class="list px-3">      
+              
+            
+          </div>
+          <div class="px-3 pb-3">
+            <a href="#nextStep" title="" class="btn btn-dark border-0 rounded-0 w-100">Checkout
+              <i class="fa fa-long-arrow-right ml-3"></i>
+            </a>
+          </div>
+    </div> 
+    <div class="noItems d-flex justify-content-center flex-wrap text-center align-items-center h-100">
+      <div class="wrapper">
+          <p class="mb-0 h4 w-100">YOUR BAG IS EMPTY</p>
+          <p class="w-100">Fill it with something sexy!</p>
+          <a href="index.html" class="btn btn-dark rounded-0">SHOP NOW</a>
+      </div>
+      
+        
+        
+    </div>
+    
+
+  </div>
+
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
