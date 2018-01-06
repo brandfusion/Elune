@@ -1,0 +1,42 @@
+a:hover {
+  text-decoration: none;
+}
+.banner-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.banner-background .wrapper {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+@media (max-width: 767px) {
+  .h2 {
+    font-size: 1.5rem;
+  }
+  .h3 {
+    font-size: 1.2rem;
+  }
+  .mobile-bg-white {
+    background-color: #ffffffbf;    
+  }
+  .reset-mobile-border {
+    border: none !important;
+  }
+}
+@media (max-width:576px) {
+  .h2 {
+    font-size: 1rem;
+  }
+  .h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1200px) {
+  .tablet-bg-white {
+    background-color: #ffffffbf;   
+  }
+}
