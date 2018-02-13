@@ -6,10 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Variants Select</title>
-
+  <style>
+    .hidden { 
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
+  <select name="A" id="A" data-index="0">
+    <option value="">Select A</option>
+    <option value="A02">A02</option>
+    <option value="A03">A03</option>
+  </select>
+  <select name="B" id="B" data-index="1">
+      <option value="">Select B</option>
+      <option value="B01" class="hidden">B01</option>
+      <option value="B02" class="hidden">B02</option>
+      <option value="B03" class="hidden">B03</option>
+  </select>
+  <select name="C" id="C" data-index="2">
+    <option value="">Select C</option>
+    <option value="C02" class="hidden">C02</option>
+    <option value="C03" class="hidden">C03</option>
+  </select>
 
   <script src="variants.js"></script>
 </body>

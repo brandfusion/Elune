@@ -71,7 +71,7 @@ const variants = [{
 ]
 
 
-const variantId = [null,null,null];
+let variantId = [null,null,null];
 const flatten = (arr) => {
   return arr.reduce((r,v) => {
     v.split(".").map(v2=> { r = [...r,v2]});    
@@ -79,11 +79,39 @@ const flatten = (arr) => {
   },[]);
 }
 const getSelectIntervalIndex = (arg) => { return arg.filter(x=> x !== null).length};
-const getAvailableCombinations = (variantsArray,arg) => {
-  
+const getAvailableCombinations = (variantsArray,arg) => {  
   return getSelectIntervalIndex(arg) !== 0 ? [...variantsArray.filter(o=>(o.id).includes(arg.filter(x => x!==null).join("."))).reduce((r,v,k)=>{ r=[...r,v.id]; return r},[])] : [...variantsArray.reduce((r,v,k)=>{ r=[...r,v.id]; return r},[])];
 }
 let variantsUpdated = [...new Set(flatten(getAvailableCombinations(variants, variantId)).sort())];
+
+
+const renderCurrentSelection = (selectedVariant, index) => {
+  let indexOfVariant = getSelectIntervalIndex(selectedVariant);
+  // console.log(indexOfVariant);
+  // console.log(index);
+  // console.log(variantId);
+  // let tempVariants = variantsUpdated.filter(x=>getIndex(x)<=indexOfVariant);
+  let tempVariants = variantId.filter(x=>x!==null).reduce((r,v,k)=>{return [...r,variants.filter(y=>y.id.includes(v)).reduce((r2,v2,k2)=>{return [...r2,v2.id.split(".")]},[])]},[]).reduce((r3,v3,k3)=>{return [...r3,v3.reduce((r4,v4,k4)=>{return [...r4,...v4]},[])]},[]).filter((el, i, a) => i === a.indexOf(el)).sort();
+  // let t2= new Set(tempVariants);
+  console.log(tempVariants);
+}
+
+const getIndex = (option) => {  
+  return option !== "" ? variants.filter(x=>x.id.split(".").includes(option))[0].id.split(".").indexOf(option) : null;
+}
+
+renderCurrentSelection(variantId);
+
+
+document.querySelectorAll("select").forEach(element => {
+  element.addEventListener("change",(e)=>{
+    let index = e.currentTarget.attributes["data-index"].value;   
+    let value = e.currentTarget.value !== "" ? e.currentTarget.value : null;
+    variantId = [...variantId.slice(0, index), e.currentTarget.value, ...variantId.slice(index+1)];
+    renderCurrentSelection(variantId, index)
+    
+  });
+});
 
 console.log(variantsUpdated);
 
