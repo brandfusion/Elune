@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Compare Module</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+	<style>
+		body {
+			font-family: 'Exo 2', sans-serif;
+		}
+
+		.productCompare {
+			margin-top: 2em;
+			border: 1px solid black;
+		}
+
+		.productCompare > .addToCompare:after {
+			content: "Add to compare +";
+		}
+
+		.addToCompare.added:after {
+			content: "Remove from compare x";
+			color: red;
+		}
+
+		.productCompare .addToCompare {
+			font-weight: bold;
+			font-size: 16px;
+			position: absolute;
+			right: 0.5em;
+			text-decoration: none;
+			cursor: pointer;
+			top: 88%;
+			padding: 0em 0.5em;
+		}
+
+		.productCompare img.img-responsive {
+			margin: 0 auto;
+		}
+
+		.productCompare h4 {
+			text-align: center;
+			margin-bottom: 3em;
+		}
+
+		.compareItem {
+			display: block;
+			text-align: center;
+			padding: 1em;
+			position: relative;
+		}
+
+		.compareItem img {
+			margin: 0 auto;
+			border-radius: 50%;
+		}
+
+
+		.compareItem .removeFromCompare {
+			position: absolute;
+			top: 25%;
+			right: 8%;
+			color: white;
+			border: none;
+			background-color: black;
+			border-radius: 50%;
+		}
+
+		.compareButton {
+			text-align: center;
+		}
+
+		.compareWrapper {
+			position: fixed;
+			border: 1px solid black;
+			background-color: #f2f2f2;
+			z-index: 99999999;
+			top: 10%;
+			box-shadow: 0px 0px 14px 3px #b1b0b0;
+			min-width: 240px;
+		}
+
+		.compareHeader {
+			padding: 1em 1em 1em 2em;
+			background-color: black;
+			color: white;
+		}
+
+		#compareProducts {
+			margin: 1em;
+			background-color: black;
+			border: none;
+			color: white;
+		}
+
+		#jCompareProducts {
+		  margin: 1em;
+		  background-color: black;
+		  border: none;
+		  color: white;
+		}
+
+		.compareHeader #collapseCompareWrapper {
+		  position: absolute;
+		  height: 47px;
+		  top: 0%;
+		  right: 0%;
+		  background-color: black;
+		  border: none;
+		  color: white;
+		  border-radius: 0;
+		}
+
+		.compareHeader #collapseCompareWrapper:hover {
+		  background-color: white;
+		  border: 1px solid black;
+		  color: black;
+		}
+
+		.compareHeader #collapseCompareWrapper.open {
+		  right: -54px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 productCompare">
+				<a class="addToCompare" data-name="Nokia 3" data-id="Nokia3" data-variant-id data-weight="140 g" data-processor="Quad-core 1.4 GHz Cortex-A53" data-price="210.00" data-battery="2630 mAh" data-img="img/nokia_3.jpg"></a>
+				<img class="img-responsive" src="img/nokia_3.jpg"/>
+				<h4>Nokia 3</h4>
+			</div>
+			<div class="col-md-3 productCompare">
+				<a class="addToCompare" data-name="Samsung Galaxy S3" data-id="SamsungS3" data-variant-id data-weight="133 g" data-processor="Quad-core 1.4 GHz Cortex-A9" data-price="250.00" data-battery="2100 mAh" data-img="img/samsung_s3.jpg"></a>
+				<img class="img-responsive" src="img/samsung_s3.jpg"/>
+				<h4>Samsung S3</h4>
+			</div>
+			<div class="col-md-3 productCompare">
+				<a class="addToCompare" data-name="Huawei P9 Lite" data-id="HuaweiP9Lite" data-variant-id data-weight="147 g" data-processor="Octa-core (4x2.0 GHz Cortex-A53 | 4x1.7 GHz Cortex-A53)" data-price="100.00" data-battery="3000 mAh" data-img="img/huawei_p9.jpg"></a>
+				<img class="img-responsive" src="img/huawei_p9.jpg"/>
+				<h4>Huawei P9 Lite</h4>
+			</div>
+			<div class="col-md-3 productCompare">
+				<a class="addToCompare" data-name="iPhone 5S" data-id="iPhone5S" data-variant-id data-weight="112 g" data-processor="1.3GHz dual-core" data-price="345.00" data-battery="1570 mAh" data-img="img/iphone_5s.jpg"></a>
+				<img class="img-responsive" src="img/iphone_5s.jpg"/>
+				<h4>iPhone 5S</h4>
+			</div>
+		</div>
+	</div>
+
+	<-! space for fixed compare behaviour exemplification -->
+	<div class="container-fluid">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
