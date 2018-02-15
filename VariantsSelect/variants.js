@@ -48,21 +48,21 @@ const options = [{
   }
 ]
 const variants = [{
-    "id": "A02.B01.C01",
+    "id": "A02.B01.C01.D03",
     "name": "SCREEN DOOR SHADE GREEN SMALL -- MAPLE WITH BLUE & RED",
     "price": 210.00,
     "currency": "$",
     "stock": 15
   },
   {
-    "id": "A02.B02.C01",
+    "id": "A02.B02.C01.D03",
     "name": "SCREEN DOOR SHADE GREEN MEDIUM -- MAPLE WITH BLUE & RED",
     "price": 230.00,
     "currency": "$",
     "stock": 25
   },
   {
-    "id": "A03.B03.C03",
+    "id": "A03.B03.C03.D01",
     "name": "SCREEN DOOR SHADE MAGENTA LARGE -- MAPLE WITH BROWN & BLACK",
     "price": 250.00,
     "currency": "$",
@@ -71,7 +71,12 @@ const variants = [{
 ]
 
 
-let variantId = [null,null,null];
+const getIndex = (option) => {  
+  return option !== "" ? variants.filter(x=>x.id.split(".").includes(option))[0].id.split(".").indexOf(option) : null;
+}
+
+
+let variantId = [null,null,null, null];
 const flatten = (arr) => {
   return arr.reduce((r,v) => {
     v.split(".").map(v2=> { r = [...r,v2]});    
@@ -82,38 +87,61 @@ const getSelectIntervalIndex = (arg) => { return arg.filter(x=> x !== null).leng
 const getAvailableCombinations = (variantsArray,arg) => {  
   return getSelectIntervalIndex(arg) !== 0 ? [...variantsArray.filter(o=>(o.id).includes(arg.filter(x => x!==null).join("."))).reduce((r,v,k)=>{ r=[...r,v.id]; return r},[])] : [...variantsArray.reduce((r,v,k)=>{ r=[...r,v.id]; return r},[])];
 }
-let variantsUpdated = [...new Set(flatten(getAvailableCombinations(variants, variantId)).sort())];
 
 
-const renderCurrentSelection = (selectedVariant, index) => {
-  let indexOfVariant = getSelectIntervalIndex(selectedVariant);
-  // console.log(indexOfVariant);
-  // console.log(index);
-  // console.log(variantId);
-  // let tempVariants = variantsUpdated.filter(x=>getIndex(x)<=indexOfVariant);
-  let tempVariants = variantId.filter(x=>x!==null).reduce((r,v,k)=>{return [...r,variants.filter(y=>y.id.includes(v)).reduce((r2,v2,k2)=>{return [...r2,v2.id.split(".")]},[])]},[]).reduce((r3,v3,k3)=>{return [...r3,v3.reduce((r4,v4,k4)=>{return [...r4,...v4]},[])]},[]).filter((el, i, a) => i === a.indexOf(el)).sort();
-  // let t2= new Set(tempVariants);
-  console.log(tempVariants);
+let filteredOptionArray = ([...new Set(flatten([...variants.reduce((r,v,k)=>{ r=[...r,v.id]; return r},[])]).sort())]).filter(x=>getIndex(x) === 0);
+
+const getFilteredOptions = (variants,variantId) => {
+
+  return variantId.filter(x=>x!==null).reduce((r,v,k)=>{ return [...r,variantId.slice(0,k+1).join(".")]  },[]).reduce((r,v,k)=>{return [...r,variants.filter(y=>y.id.includes(v)).reduce((r2,v2,k2)=>{return [...r2,v2.id.split(".")]},[])]},[]).reduce((r3,v3,k3)=>{return [...r3,v3.reduce((r4,v4,k4)=>{return [...r4,...v4]},[])]},[]).map((a,i)=> {return (([...new Set(a)]).sort()).filter(f=>{return getIndex(f) == i+1})});
+
 }
-
-const getIndex = (option) => {  
-  return option !== "" ? variants.filter(x=>x.id.split(".").includes(option))[0].id.split(".").indexOf(option) : null;
-}
-
-renderCurrentSelection(variantId);
-
 
 document.querySelectorAll("select").forEach(element => {
   element.addEventListener("change",(e)=>{
-    let index = e.currentTarget.attributes["data-index"].value;   
+    let index = parseFloat(e.currentTarget.attributes["data-index"].value);   
     let value = e.currentTarget.value !== "" ? e.currentTarget.value : null;
-    variantId = [...variantId.slice(0, index), e.currentTarget.value, ...variantId.slice(index+1)];
-    renderCurrentSelection(variantId, index)
+
+    variantId = variantId.reduce((r,v,k)=>{
+      if(k < index) {
+        r= [...r,v];
+      } else if (k===index) {        
+        r=[...r,value];
+      } else {
+        r= [...r,null];
+      }
+      return r;
+    },[]);
+    
+    variantId.map((v,i)=>{
+      if (v === null) {       
+        document.querySelector('[data-index="'+i+'"]').selectedIndex = 0;
+      }
+    });
+
+    let renderSource = [[...filteredOptionArray], ...getFilteredOptions(variants,variantId)];
+    document.querySelectorAll('[data-index] option').forEach(el => {
+      el.classList.remove("hidden");    
+    })
+    
+    renderSource.map((arr,i) =>{      
+      document.querySelectorAll('[data-index="'+i+'"] option').forEach(el => {        
+        if (arr.filter(x=>x === el.value).length === 0) {
+          el.classList.add("hidden");
+        }
+      })
+    });
+
+    document.querySelectorAll('[data-index]').forEach((el,i) => {  
+      if (i > index) {
+       el.children[0].classList.remove("hidden");
+      }    
+    })
     
   });
 });
 
-console.log(variantsUpdated);
+
 
 
 
