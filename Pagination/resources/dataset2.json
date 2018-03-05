@@ -1,0 +1,60 @@
+{
+  "Pagination": {
+      "Pages": [
+          {
+              "PageNumber": 2,
+              "IsCurrent": false,
+              "Label": "Previous",
+              "IsNavigational": true
+          },
+          {
+              "PageNumber": 1,
+              "IsCurrent": false,
+              "Label": "1",
+              "IsNavigational": false
+          },
+          {
+              "PageNumber": 2,
+              "IsCurrent": false,
+              "Label": "2",
+              "IsNavigational": false
+          },
+          {
+              "PageNumber": 3,
+              "IsCurrent": true,
+              "Label": "3",
+              "IsNavigational": false
+          },
+          {
+              "PageNumber": 4,
+              "IsCurrent": false,
+              "Label": "4",
+              "IsNavigational": false
+          },
+          {
+              "PageNumber": 5,
+              "IsCurrent": false,
+              "Label": "5",
+              "IsNavigational": false
+          },
+          {
+              "PageNumber": 6,
+              "IsCurrent": false,
+              "Label": "6",
+              "IsNavigational": false
+          },
+          {
+              "PageNumber": 7,
+              "IsCurrent": false,
+              "Label": "7",
+              "IsNavigational": false
+          },
+          {
+              "PageNumber": 4,
+              "IsCurrent": false,
+              "Label": "Next",
+              "IsNavigational": true
+          }
+      ]
+  }
+}
