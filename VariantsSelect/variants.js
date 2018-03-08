@@ -48,21 +48,21 @@ const options = [{
   }
 ]
 const variants = [{
-    "id": "A02.B01.C01.D03",
+    "id": "A02.B01.C01",
     "name": "SCREEN DOOR SHADE GREEN SMALL -- MAPLE WITH BLUE & RED",
     "price": 210.00,
     "currency": "$",
     "stock": 15
   },
   {
-    "id": "A02.B02.C01.D03",
+    "id": "A02.B02.C01",
     "name": "SCREEN DOOR SHADE GREEN MEDIUM -- MAPLE WITH BLUE & RED",
     "price": 230.00,
     "currency": "$",
     "stock": 25
   },
   {
-    "id": "A03.B03.C03.D01",
+    "id": "A03.B03.C03",
     "name": "SCREEN DOOR SHADE MAGENTA LARGE -- MAPLE WITH BROWN & BLACK",
     "price": 250.00,
     "currency": "$",
@@ -76,7 +76,7 @@ const getIndex = (option) => {
 }
 
 
-let variantId = [null,null,null, null];
+let variantId = ["A03","B03","C03"];
 const flatten = (arr) => {
   return arr.reduce((r,v) => {
     v.split(".").map(v2=> { r = [...r,v2]});    
@@ -102,16 +102,27 @@ document.querySelectorAll("select").forEach(element => {
     let index = parseFloat(e.currentTarget.attributes["data-index"].value);   
     let value = e.currentTarget.value !== "" ? e.currentTarget.value : null;
 
-    variantId = variantId.reduce((r,v,k)=>{
-      if(k < index) {
-        r= [...r,v];
-      } else if (k===index) {        
-        r=[...r,value];
-      } else {
-        r= [...r,null];
-      }
-      return r;
-    },[]);
+    // variantId = variantId.reduce((r,v,k)=>{
+    //   if(k < index) {
+    //     r= [...r,v];
+    //   } else if (k===index) {        
+    //     r=[...r,value];
+    //   } else {
+    //     r= [...r,null];
+    //   }
+    //   return r;
+    // },[]);
+
+    variantId = [...variantId].pop();
+
+   //available combinations: A1.B1.C1.D1.E1, A1.B1.C1.D1.E2, A1.B2.C1.D1.E1
+   //selected: A1.B2.C1.D1.E1
+   //ex: changed B, index = 1
+   //[...variantId] must be the first available combination that has A1.B1 => A1.B1.C1.D1.E1 .pop() => [A1,B1,C1,D1]  => renderedSource = what needs to be rendered
+
+    
+
+    // console.log("variantID",variantId);
     
     variantId.map((v,i)=>{
       if (v === null) {       
@@ -120,6 +131,8 @@ document.querySelectorAll("select").forEach(element => {
     });
 
     let renderSource = [[...filteredOptionArray], ...getFilteredOptions(variants,variantId)];
+    let tempIncludesVerification = renderSource.reduce((r,v,k)=>{return [...r,...v]},[]);
+    
     document.querySelectorAll('[data-index] option').forEach(el => {
       el.classList.remove("hidden");    
     })
@@ -143,8 +156,15 @@ document.querySelectorAll("select").forEach(element => {
 
 
 
+//init
+// let selectedVariantId = [...variantId].pop();
+let renderSource = [[...filteredOptionArray], ...getFilteredOptions(variants,variantId)];
+let tempIncludesVerification = renderSource.reduce((r,v,k)=>{return [...r,...v]},[]);
+console.log("tempIncludesVerification",  tempIncludesVerification);
+console.log("options", options);
 
-
+let filteredOptionsTemp = options.reduce((r,v,k)=>{return [...r,{...v, values: v.values.filter(o => tempIncludesVerification.includes(o.value))}]},[]);
+console.log(filteredOptionsTemp);
 
 
 
